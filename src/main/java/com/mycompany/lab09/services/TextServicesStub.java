@@ -8,6 +8,7 @@ package com.mycompany.lab09.services;
 import com.mycompany.lab09.model.Text;
 import com.mycompany.lab09.model.TextRepository;
 import java.util.ArrayList;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,10 @@ public class TextServicesStub implements CommandLineRunner{
     
     public void postText(String text){
         textRepository.save(new Text(text));
+    }
+    
+    public List<Text> getLastNTexts(){
+        return textRepository.findAll();
     }
     
     @Override

@@ -24,6 +24,20 @@ public class Text {
         this.text = text;
         this.date = new Date();
     }
+
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+    
+    
     
     
 }

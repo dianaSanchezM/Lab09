@@ -5,6 +5,7 @@
  */
 package com.mycompany.lab09.model;
 
+import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
@@ -13,4 +14,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  */
 public interface TextRepository extends MongoRepository<Text, String>{
     public Text findByIdentifier(String identifier);
+    @Override
+    public List<Text> findAll();
 }
